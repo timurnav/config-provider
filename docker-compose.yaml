@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  mongodb-config-provider:
+    image: mongo:latest
+    environment:
+      - MONGO_LOG_DIR=/dev/null
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./mongo:/data/db
